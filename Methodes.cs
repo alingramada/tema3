@@ -1,0 +1,78 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace LibraryProject
+{
+   public  class Methodes
+    {
+        public UserAccount CreateAccount()
+        {
+            UserAccount user = new UserAccount();
+            PersonalInfo p = new PersonalInfo();
+            Console.WriteLine("Firstname:");
+            p.FirstName = Console.ReadLine();
+            Console.WriteLine("Lastname:");
+            p.LastName = Console.ReadLine();
+            Console.WriteLine("Month of birth:");
+            string month = Console.ReadLine();
+            Console.WriteLine("Day of birth:");
+            string day = Console.ReadLine();
+            Console.WriteLine("Year of birth:");
+            string year = Console.ReadLine();
+            p.BirthDay = Convert.ToDateTime(month + "-" + day + "-" + year);
+            user.PersinlInfo = p;
+            Console.WriteLine("Enter your email:");
+            user.Email = Console.ReadLine();
+            Console.WriteLine("Enter your password:");
+            user.Password = Console.ReadLine();
+
+            return user;
+
+        }
+        public UserAccount LogIn(List<UserAccount> account)
+        {
+            bool logIn = false;
+            Console.WriteLine("Email");
+            string Email = Console.ReadLine().ToString();
+            Console.WriteLine("Password:");
+            string Password = Console.ReadLine().ToString();
+            UserAccount userAccount = new UserAccount();
+            foreach (var a in account)
+            {
+                if (Password == a.Email && Email == a.Email)
+                {
+                    logIn = true;
+                    userAccount = a;
+
+                }
+
+            }
+            if (logIn == true)
+            {
+                Console.WriteLine("Succesfuly login!");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("Can't login!");
+                Console.WriteLine("Password or email is inccorect!");
+                Console.ReadLine();
+            }
+            return userAccount;
+        }
+
+        public void GetUserMessage(UserAccount account)
+        {   
+            string message = "";
+            Console.WriteLine("Write your message:");
+            message = Console.ReadLine();
+       
+            Console.WriteLine("User's message is:{0}", message);
+
+            Console.WriteLine("posted byc {0} {1} ,{2}", account.PersinlInfo.FirstName,account.PersinlInfo.LastName, DateTime.Now.ToString());
+            Console.ReadLine();
+
+        }
+    }
+}
