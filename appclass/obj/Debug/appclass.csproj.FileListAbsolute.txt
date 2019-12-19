@@ -1,0 +1,9 @@
+C:\Users\HOME's\source\repos\appclass\bin\Debug\appclass.exe.config
+C:\Users\HOME's\source\repos\appclass\bin\Debug\appclass.exe
+C:\Users\HOME's\source\repos\appclass\bin\Debug\appclass.pdb
+C:\Users\HOME's\source\repos\appclass\bin\Debug\LibraryProject.dll
+C:\Users\HOME's\source\repos\appclass\bin\Debug\LibraryProject.pdb
+C:\Users\HOME's\source\repos\appclass\obj\Debug\appclass.csprojAssemblyReference.cache
+C:\Users\HOME's\source\repos\appclass\obj\Debug\appclass.csproj.CopyComplete
+C:\Users\HOME's\source\repos\appclass\obj\Debug\appclass.exe
+C:\Users\HOME's\source\repos\appclass\obj\Debug\appclass.pdb
